@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Currículo - Lune Yunka da Silva Souza</title>
+
   <style>
     * {
       margin: 0;
@@ -16,11 +17,9 @@
       line-height: 1.6;
       color: #333;
       background: #f5f5f5;
-      margin: 0;
-      padding: 0;
     }
 
-    .container {
+    .page {
       max-width: 900px;
       margin: 20px auto;
       background: #ffffff;
@@ -31,301 +30,33 @@
     /* Header */
     .header {
       border-bottom: 3px solid #2c3e50;
-      padding-bottom: 20px;
-      margin-bottom: 25px;
-      max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
+      padding-bottom: 16px;
+      margin-bottom: 24px;
       text-align: center;
     }
 
     .name {
-      font-size: 32px;
+      font-size: 30px;
       font-weight: 700;
       color: #2c3e50;
-      margin-bottom: 5px;
+      margin-bottom: 6px;
     }
 
     .subtitle {
-      font-size: 16px;
+      font-size: 15px;
       color: #e74c3c;
       font-weight: 600;
       margin-bottom: 8px;
+    }
+
+    .contact-info {
+      font-size: 13px;
+      color: #555;
     }
 
     .contact-info span {
       display: block;
-      margin-bottom: 8px;
-    }
-
-    a {
-      color: #0077b5;
-      text-decoration: none;
-      font-weight: 500;
-    }
-
-    /* Sections */
-    .section {
-      margin-bottom: 25px;
-    }
-
-    .section-title {
-      font-size: 14px;
-      font-weight: 700;
-      color: #ffffff;
-      background: #2c3e50;
-      padding: 10px 15px;
-      margin-bottom: 15px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-
-    /* Resumo Profissional */
-    .summary {
-      font-size: 14px;
-      color: #444;
-      line-height: 1.8;
-      text-align: justify;
-    }
-
-    /* Áreas de Atuação */
-    .areas-list {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-    }
-
-    .area-item {
-      font-size: 13px;
-      color: #333;
-      padding: 8px 12px;
-      background: #ecf0f1;
-      border-left: 4px solid #e74c3c;
-      line-height: 1.6;
-    }
-
-    /* Experiência */
-    .experience-item {
-      margin-bottom: 18px;
-      border-left: 3px solid #3498db;
-      padding-left: 15px;
-    }
-
-    .job-title {
-      font-weight: 700;
-      font-size: 14px;
-      color: #2c3e50;
-    }
-
-    .company {
-      font-size: 13px;
-      color: #e74c3c;
-      font-weight: 600;
-      display: inline;
-    }
-
-    .experience-description {
-      font-size: 13px;
-      color: #555;
-      margin-top: 6px;
-      line-height: 1.6;
-    }
-
-    .experience-description ul {
-      list-style: none;
-      margin-left: 15px;
-      margin-top: 6px;
-    }
-
-    .experience-description li::before {
-      content: "▸ ";
-      color: #3498db;
-      font-weight: bold;
-      margin-right: 6px;
-    }
-
-    .experience-description li {
       margin-bottom: 4px;
-      font-size: 13px;
     }
 
-    /* Formação */
-    .education-item {
-      font-size: 13px;
-      color: #333;
-      margin-bottom: 12px;
-      line-height: 1.6;
-    }
-
-    .education-item strong {
-      color: #2c3e50;
-    }
-
-    /* Cursos */
-    .course-category {
-      margin-bottom: 12px;
-    }
-
-    .course-category-title {
-      font-weight: 700;
-      color: #2c3e50;
-      font-size: 13px;
-      margin-bottom: 6px;
-    }
-
-    .course-item {
-      font-size: 13px;
-      color: #555;
-      margin-bottom: 4px;
-      padding-left: 15px;
-      position: relative;
-    }
-
-    .course-item::before {
-      content: "✓ ";
-      color: #27ae60;
-      font-weight: bold;
-      position: absolute;
-      left: 0;
-    }
-
-    /* Ferramentas */
-    .tools-category {
-      margin-bottom: 20px;
-    }
-
-    .tools-title {
-      font-weight: 700;
-      color: #2c3e50;
-      font-size: 13px;
-      margin-bottom: 6px;
-    }
-
-    .tools-list {
-      font-size: 13px;
-      color: #555;
-      line-height: 1.6;
-    }
-
-    /* Diferenciais */
-    .differentials {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 10px;
-      margin-top: 30px;
-    }
-
-    .diff-item {
-      font-size: 13px;
-      color: #333;
-      padding: 10px;
-      background: #f0f9ff;
-      border-left: 3px solid #e74c3c;
-      line-height: 1.5;
-    }
-
-    .diff-item::before {
-      content: "✨ ";
-      margin-right: 4px;
-    }
-
-    @media (max-width: 600px) {
-      .container {
-        padding: 16px 18px;
-      }
-
-      .areas-list,
-      .differentials {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <!-- Header -->
-    <header class="header">
-      <div class="name">LUNE YUNKA DA SILVA SOUZA</div>
-      <div class="subtitle">Visual Design | Storytelling para Marcas | Social Media | UX Writing | Branding</div>
-      <div class="contact-info">
-        <span>📍 Pavuna, Rio de Janeiro – RJ</span>
-        <span>
-          <a href="https://www.linkedin.com/in/luneyunka/" target="_blank" rel="noopener">
-            💼 linkedin.com/in/luneyunka
-          </a>
-        </span>
-      </div>
-    </header>
-
-    <!-- Resumo Profissional -->
-    <section class="section">
-      <div class="section-title">Resumo Profissional</div>
-      <p class="summary">
-        Sou profissional com formação em Cinema e experiência em marketing, tecnologia e comunicação. Atuo com visão analítica e criativa, estruturando processos, entendendo a dor do usuário e desenvolvendo soluções estratégicas para ambientes digitais, B2B e startups.
-        <br><br>
-        Conecto dados, narrativa e experiência do usuário para gerar valor real aos negócios — seja na criação de estratégias de marca, na pesquisa e design de produtos digitais, ou na gestão de relacionamento com clientes e comunidades.
-        <br><br>
-        Tenho facilidade em trabalhar com múltiplas disciplinas: desde pesquisa UX até gestão de redes sociais, conteúdo, branding e automação de marketing.
-      </p>
-    </section>
-
-    <!-- Áreas de Atuação -->
-    <section class="section">
-      <div class="section-title">Áreas de Atuação</div>
-      <div class="areas-list">
-        <div class="area-item">Social Media e Conteúdo Digital com storytelling estratégico</div>
-        <div class="area-item">Branding, Narrativa de Marca e UX Writing</div>
-        <div class="area-item">Marketing Digital e Estratégico em contextos B2B, B2C e startups</div>
-        <div class="area-item">UX Design e Pesquisa com foco em produtos digitais</div>
-        <div class="area-item">CRM, régua de relacionamento e automação de marketing</div>
-        <div class="area-item">Inteligência Artificial aplicada a marketing, comunicação e operações</div>
-      </div>
-    </section>
-
-    <!-- Experiência Profissional -->
-    <section class="section">
-      <div class="section-title">Experiência Profissional</div>
-
-      <div class="experience-item">
-        <div class="job-title">
-          <span class="company">Instituto Niemeyer</span> — Assistente de Mídias Digitais
-        </div>
-        <div class="experience-description">
-          <ul>
-            <li>Gestão de redes sociais com foco em conteúdo, calendário editorial e relacionamento com a comunidade.</li>
-            <li>Desenvolvimento de estratégias de comunicação digital ligadas à cultura, arquitetura e memória.</li>
-            <li>Acompanhamento de métricas básicas de engajamento para decisões de conteúdo.</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="experience-item">
-        <div class="job-title">
-          <span class="company">Outlier AI</span> — Remote AI Trainer
-        </div>
-        <div class="experience-description">
-          <ul>
-            <li>Treinamento e validação de respostas de modelos de IA, com foco em qualidade, contexto e ética.</li>
-            <li>Análise crítica de prompts e outputs para melhoria contínua do sistema.</li>
-            <li>Trabalho remoto assíncrono com padrões de qualidade e atenção a detalhes.</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="experience-item">
-        <div class="job-title">
-          <span class="company">Prime Learning</span> — SDR | Marketing B2B
-        </div>
-        <div class="experience-description">
-          <ul>
-            <li>Prospecção e qualificação de leads para soluções educacionais em ambiente B2B.</li>
-            <li>Uso de CRM, régua de relacionamento e cadências de email para aumentar taxa de resposta.</li>
-            <li>Organização de pipeline comercial e follow-up estratégico.</li>
-            <li>Análise básica de métricas de conversão e desempenho de campanhas.</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="experience-item">
-        <div class="job-title">
-          <span cla
+    .contact-info
